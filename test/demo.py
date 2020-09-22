@@ -1,10 +1,4 @@
 import sys
-import imp
-
-# sys.modules['dash_table'] = imp.load_source('dash_table', '/mnt/c/Users/Super Bruce/Desktop/tornado/dash/test/dash_table_enhanced/__init__.py')
-# sys.modules['dash_table._imports_'] = imp.load_source('dash_table._imports_', '/mnt/c/Users/Super Bruce/Desktop/tornado/dash/test/dash_table_enhanced/_imports_.py')
-# sys.modules['dash_table.DataTable'] = imp.load_source('dash_table.DataTable', '/mnt/c/Users/Super Bruce/Desktop/tornado/dash/test/dash_table_enhanced/DataTable.py')
-# dash_table = imp.load_source('dash_table', '/mnt/c/Users/Super Bruce/Desktop/tornado/dash/test/dash_table_enhanced/__init__.py')
 
 sys.path.insert(0, r"/mnt/c/Users/Super Bruce/Desktop/tornado/dash/test/dash_table_enhanced")
  
@@ -15,12 +9,6 @@ from dash.dependencies import Input, Output
 import pandas as pd
 from collections import OrderedDict
 import json
- 
-
-print(sys.modules['dash_table'])
-print(
-sys.modules['dash_table._imports_'])
-print(sys.modules['dash_table.DataTable'] )
 
 df = pd.DataFrame(OrderedDict([
     ('climate', ['Sunny', 'Snowy', 'Sunny', 'Rainy']),
