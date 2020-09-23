@@ -1,6 +1,4 @@
-import sys
-import imp
-
+import sys 
 sys.path.insert(0, r"/mnt/c/Users/Super Bruce/Desktop/tornado/dash/test/dash_table_enhanced")
  
 import dash 
