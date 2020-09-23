@@ -36,7 +36,8 @@ app.layout = html.Div([
                 'options': [
                     {'label': i, 'value': i}
                     for i in df['climate'].unique()
-                ]
+                ],
+                
             },
             'city': {
                  'options': [
