@@ -7,6 +7,7 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 import pandas as pd
 from collections import OrderedDict
+from datetime import datetime as dt
 import json
   
 
@@ -14,7 +15,7 @@ df = pd.DataFrame(OrderedDict([
     ('climate', ['Sunny', 'Snowy', 'Sunny', 'Rainy']),
     ('temperature', [13, 43, 50, 30]),
     ('city', ['NYC', 'Montreal', 'Miami', 'NYC']),
-    ('days in', [[], [], [], []])
+    ('days in', [[dt.today()], [], [], []])
 ]))
  
 app = dash.Dash(__name__)
