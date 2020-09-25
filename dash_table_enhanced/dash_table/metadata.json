@@ -294,6 +294,10 @@
                   {
                     "value": "'multiDatesPicker'",
                     "computed": false
+                  },
+                  {
+                    "value": "'multiValueDropdown'",
+                    "computed": false
                   }
                 ],
                 "description": "The `presentation` to use to display the value.\nDefaults to 'input' for ['datetime', 'numeric', 'text', 'any'].",
@@ -1109,6 +1113,10 @@
                 "value": {
                   "name": "exact",
                   "value": {
+                    "id": {
+                      "name": "any",
+                      "required": false
+                    },
                     "label": {
                       "name": "string",
                       "required": true
@@ -1171,6 +1179,10 @@
                 "value": {
                   "name": "exact",
                   "value": {
+                    "id": {
+                      "name": "any",
+                      "required": false
+                    },
                     "label": {
                       "name": "string",
                       "required": true
@@ -1221,6 +1233,10 @@
                   "value": {
                     "name": "exact",
                     "value": {
+                      "id": {
+                        "name": "any",
+                        "required": false
+                      },
                       "label": {
                         "name": "string",
                         "required": true

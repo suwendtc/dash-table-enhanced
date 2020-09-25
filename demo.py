@@ -14,7 +14,7 @@ import json
 df = pd.DataFrame(OrderedDict([
     ('climate', ['Sunny', 'Snowy', 'Sunny', 'Rainy']),
     ('temperature', [13, 43, 50, 30]),
-    ('city', ['NYC', 'Montreal', 'Miami', 'NYC']),
+    ('city', [['NYC', 'Montreal'], ['Montreal'], ['Miami'], ['NYC']]),
     ('days in', [[dt.today()], [], [], []])
 ]))
  
@@ -27,7 +27,7 @@ app.layout = html.Div([
         columns=[
             {'id': 'climate', 'name': 'climate', 'presentation': 'dropdown'},
             {'id': 'temperature', 'name': 'temperature'},
-            {'id': 'city', 'name': 'city', 'presentation': 'dropdown'},
+            {'id': 'city', 'name': 'city', 'presentation': 'multiValueDropdown'},
             {'id': 'days in', 'name': 'days in', 'presentation': 'multiDatesPicker'}
         ],
 
@@ -41,9 +41,10 @@ app.layout = html.Div([
                 
             },
             'city': {
+                'clearable': True,
                  'options': [
                     {'label': i, 'value': i}
-                    for i in df['city'].unique()
+                    for i in ['NYC', 'Montreal', 'Miami']
                 ]
             }
         }

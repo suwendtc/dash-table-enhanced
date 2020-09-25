@@ -147,7 +147,7 @@ The `id` is not visible in the table.
 as it appears in the column header.
 If `name` is a list of strings, then the columns
 will render with multiple headers rows.
-  - presentation (a value equal to: 'input', 'dropdown', 'markdown', 'multiDatesPicker'; optional): The `presentation` to use to display the value.
+  - presentation (a value equal to: 'input', 'dropdown', 'markdown', 'multiDatesPicker', 'multiValueDropdown'; optional): The `presentation` to use to display the value.
 Defaults to 'input' for ['datetime', 'numeric', 'text', 'any'].
   - on_change (dict; optional): The `on_change` behavior of the column for user-initiated modifications.
 'action' (default 'coerce'):
@@ -431,8 +431,9 @@ The `clearable` property defines whether the value can be deleted.
 The `options` property refers to the `options` of the dropdown. dropdown has the following type: dict with strings as keys and values of type dict containing keys 'clearable', 'options'.
 Those keys have the following types:
   - clearable (boolean; optional)
-  - options (dict; required): options has the following type: list of dicts containing keys 'label', 'value'.
+  - options (dict; required): options has the following type: list of dicts containing keys 'id', 'label', 'value'.
 Those keys have the following types:
+  - id (boolean | number | string | dict | list; optional)
   - label (string; required)
   - value (number | string | boolean; required)
 - dropdown_conditional (dict; optional): `dropdown_conditional` specifies dropdown options in various columns and cells.
@@ -446,8 +447,9 @@ Those keys have the following types:
 Those keys have the following types:
   - column_id (string; optional)
   - filter_query (string; optional)
-  - options (dict; required): options has the following type: list of dicts containing keys 'label', 'value'.
+  - options (dict; required): options has the following type: list of dicts containing keys 'id', 'label', 'value'.
 Those keys have the following types:
+  - id (boolean | number | string | dict | list; optional)
   - label (string; required)
   - value (number | string | boolean; required)
 - dropdown_data (dict; optional): `dropdown_data` specifies dropdown options on a row-by-row, column-by-column basis.
@@ -455,8 +457,9 @@ Each item in the array corresponds to the corresponding dropdowns for the `data`
 at the same index. Each entry in the item refers to the Column ID. dropdown_data has the following type: list of dicts with strings as keys and values of type dict containing keys 'clearable', 'options'.
 Those keys have the following types:
   - clearable (boolean; optional)
-  - options (dict; required): options has the following type: list of dicts containing keys 'label', 'value'.
+  - options (dict; required): options has the following type: list of dicts containing keys 'id', 'label', 'value'.
 Those keys have the following types:
+  - id (boolean | number | string | dict | list; optional)
   - label (string; required)
   - value (number | string | boolean; required)
 - tooltip (dict; optional): `tooltip` represents the tooltip shown
